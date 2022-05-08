@@ -54,4 +54,6 @@ input[type=text] {
 hr{
   margin: 15%;
   width: 70%;
+  margin-top: 1%;
+  margin-bottom: 2%;
 }
