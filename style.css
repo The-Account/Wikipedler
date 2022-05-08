@@ -30,6 +30,7 @@ table{
 }
 table, th, td {
   border: 1px solid #1f1f1f;;
+  background-color: #e8e8e8;
 }
 form{
   width: 100%;
