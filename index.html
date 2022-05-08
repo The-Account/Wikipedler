@@ -27,6 +27,7 @@
     <script>
       var cgn = 3;
       function takeGuess() {
+        if(document.getElementById("guess").value == 0) {return false};
        document.getElementById("guessd").appendChild(document.getElementById("currentGuess").firstChild)
        document.getElementById("currentGuess").innerHTML=""
       var newGuess = document.createElement('tr');
