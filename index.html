@@ -29,7 +29,7 @@
        document.getElementById("guessd").appendChild(document.getElementById("currentGuess").firstChild)
        document.getElementById("currentGuess").innerHTML=""
       var newGuess = document.createElement('tr');
-      newGuess.innerHTML=("<th>" + cgn + "</th><th>" + document.getElementById("guess").value + "</th><th>2</th>");
+      newGuess.innerHTML=("<th>#" + cgn + "</th><th>" + document.getElementById("guess").value + "</th><th>2</th>");
         document.getElementById("currentGuess").appendChild(newGuess)
         cgn ++;
         document.getElementById("guess").value = "";
