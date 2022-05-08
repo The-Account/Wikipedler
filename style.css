@@ -37,3 +37,7 @@ form{
   width: 100%;
   text-align: center;
 }
+input[type=submit] {
+  background-color: #e8e8e880;
+  padding: 5pt;
+}
