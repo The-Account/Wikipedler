@@ -54,6 +54,7 @@ input[type=text] {
   font-size: 16pt;
 }
 hr{
+  border-top: 3px solid #1f1f1f;
   margin: 15%;
   width: 70%;
   margin-top: 1%;
