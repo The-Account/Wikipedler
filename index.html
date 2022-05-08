@@ -9,7 +9,7 @@
 <body>
   <h1>Wikipedler</h1>
   <p>Try to guess the secret Wikipedia-Article.</p>
-  <form onsubmit="addNonsense()"><input placeholder="Guess" autocorrect="off" autocapitalize="none"
+  <form onsubmit="takeGuess()"><input placeholder="Guess" autocorrect="off" autocapitalize="none"
         autocomplete="off"
         type="text" id="guess">
   <input type="submit" value="Guess" id="guess-btn"></form>
@@ -21,11 +21,10 @@
   <footer>
     <script>
       var cgn = 3;
-      function addNonsense() {
-    
-        document.getElementById("guessd").appendChild (
-          document.createElement('tr').innerHTML=("<th>" + cgn + "</th><th>" + document.getElementById("guess").innerHTML + "</th><th>2</th>")
-        )
+      function takeGuess() {
+      var newGuess = document.createElement('tr');
+      newGuess.innerHTML=("<th>" + cgn + "</th><th>" + document.getElementById("guess").innerHTML + "</th><th>2</th>");
+        document.getElementById("guessd").appendChild(newGuess)
         cgn ++;
         
       }
