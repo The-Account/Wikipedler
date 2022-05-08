@@ -9,12 +9,12 @@
 <body>
   <h1>Wikipedler</h1>
   <h1 id="help" onclick="help();">?</h2>
-  <p>Try to guess the secret Wikipedia-Article.</p>
+  <p>Errate den geheimen Wikipedia-Artikel.</p>
   <p id="textAlert"></p>
-  <form onsubmit="takeGuess(); return false; "><input placeholder="Guess" autocorrect="off" autocapitalize="none"
+  <form onsubmit="takeGuess(); return false; "><input placeholder="Raten" autocorrect="off" autocapitalize="none"
         autocomplete="off"
         type="text" id="guess">
-  <input type="submit" value="Guess" id="guess-btn"></form>
+  <input type="submit" value="Raten" id="guess-btn"></form>
   <table id="currentGuess"> 
   </table>
   <hr></hr>
@@ -40,7 +40,7 @@
         document.getElementById("textAlert").innerHTML = "Sorry, I couldn't find a Wikipedia Artikel called '" + wrongArtikel + "'. Try a different term.";
       }
       function help() {
-      alert("Try to guess the secret Wikipedia-Article!")}
+      alert("Errate den geheimen Wikipedia-Artikel.")}
     </script>
   </footer>
 </html>
