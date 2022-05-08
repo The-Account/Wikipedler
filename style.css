@@ -28,6 +28,7 @@ table{
   width: 60%;
   margin: 20%;
   margin-top: 2%;
+  margin-bottom: 1%;
   border-collapse: collapse;
 }
 table, th, td {
