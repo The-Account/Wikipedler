@@ -62,3 +62,7 @@ hr{
   margin-bottom: 2%;
 }
 #textAlert{color: #690716;}
+#help{
+  position: absolute;
+  top: 0px;
+  right: 0px;}
