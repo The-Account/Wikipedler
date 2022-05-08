@@ -23,7 +23,7 @@
       var cgn = 3;
       function takeGuess() {
       var newGuess = document.createElement('tr');
-      newGuess.innerHTML=("<th>" + cgn + "</th><th>" + document.getElementById("guess").innerHTML + "</th><th>2</th>");
+      newGuess.innerHTML=("<th>" + cgn + "</th><th>" + document.getElementById("guess").value + "</th><th>2</th>");
         document.getElementById("guessd").appendChild(newGuess)
         cgn ++;
         
