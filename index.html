@@ -13,6 +13,10 @@
         autocomplete="off"
         type="text" id="guess">
   <input type="submit" value="Guess" id="guess-btn"></form>
+  <table id="currentGuess"> 
+    <tr><th>3</th><th>Homer Simpson</th><th>4</th></tr>
+  </table>
+  <hr></hr>
   <table id="guessd"> 
     <tr><th>1</th><th>Ohio</th><th>3</th></tr>
     <tr><th>2</th><th>Cleveland</th><th>2</th></tr>
@@ -20,11 +24,13 @@
 </body>
   <footer>
     <script>
-      var cgn = 3;
+      var cgn = 4;
       function takeGuess() {
+       document.getElementById("guessd").appendChild(document.getElementById("currentGuess").innerHTML)
+       document.getElementById("currentGuess").innerHTML=""
       var newGuess = document.createElement('tr');
       newGuess.innerHTML=("<th>" + cgn + "</th><th>" + document.getElementById("guess").value + "</th><th>2</th>");
-        document.getElementById("guessd").appendChild(newGuess)
+        document.getElementById("currentGuess").appendChild(newGuess)
         cgn ++;
         
       }
