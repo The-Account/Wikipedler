@@ -9,10 +9,10 @@
 <body>
   <h1>Wikipedler</h1>
   <p>Try to guess the secret Wikipedia-Article.</p>
-  <div><input placeholder="Guess" autocorrect="off" autocapitalize="none"
+  <form onsubmit="addNonsense()"><input placeholder="Guess" autocorrect="off" autocapitalize="none"
         autocomplete="off"
         type="text" id="guess">
-  <input type="submit" value="Guess" id="guess-btn"></div>
+  <input type="submit" value="Guess" id="guess-btn"></form>
   <table id="guessd"> 
     <tr><th>1</th><th>Ohio</th><th>3</th></tr>
     <tr><th>2</th><th>Cleveland</th><th>2</th></tr>
