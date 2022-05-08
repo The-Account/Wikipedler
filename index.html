@@ -9,7 +9,7 @@
 <body>
   <h1>Wikipedler</h1>
   <p>Try to guess the secret Wikipedia-Article.</p>
-  <form onsubmit="takeGuess()"><input placeholder="Guess" autocorrect="off" autocapitalize="none"
+  <form onsubmit="return false; takeGuess()"><input placeholder="Guess" autocorrect="off" autocapitalize="none"
         autocomplete="off"
         type="text" id="guess">
   <input type="submit" value="Guess" id="guess-btn"></form>
