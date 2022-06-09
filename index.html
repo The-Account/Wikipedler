@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <title>Wikipedler</title>
-  <meta charset="utf-8">
-  <link href="style.css" rel="stylesheet" type="text/css">
+	<title>Wikipedler</title>
+	<meta charset="utf-8">
+	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <h1>Wikipedler</h1>
-  <h1 id="help" onclick="help();">?</h2>
-  <p>Errate den geheimen Wikipedia-Artikel.</p>
-  <p id="textAlert"></p>
-  <form onsubmit="takeGuess(); return false; "><input placeholder="Raten" autocorrect="off" autocapitalize="none"
-        autocomplete="off"
-        type="text" id="guess">
-  <input type="submit" value="Raten" id="guess-btn"></form>
-  <table id="currentGuess"> 
-  </table>
-  <hr></hr>
-  <table id="guessd"> 
-    <tr><th>#1</th><th>Ohio</th><th>3</th></tr>
-    <tr><th>#2</th><th>Cleveland</th><th>2</th></tr>
-  </table>
+	<h1>Wikipedler</h1>
+	<h2 id="help" onclick="help();">?</h2>
+	<p>Errate den geheimen Wikipedia-Artikel.</p>
+	<p id="textAlert"></p>
+	<form onsubmit="takeGuess(); return false; ">
+		<input placeholder="Raten" autocorrect="off" autocapitalize="none" autocomplete="off" type="text" id="guess">
+		<input type="submit" value="Raten" id="guess-btn">
+	</form>
+	<table id="currentGuess"> 
+	</table>
+	<hr></hr>
+	<table id="guessd"> 
+		<tr><th>#1</th><th>Ohio</th><th>3</th></tr>
+		<tr><th>#2</th><th>Cleveland</th><th>2</th></tr>
+	</table>
+	<script>
+		var cgn = 3;
+		function takeGuess() {
+			if(document.getElementById("guess").value == 0) {return false};
+			document.getElementById("guessd").appendChild(document.getElementById("currentGuess").firstChild)
+			document.getElementById("currentGuess").innerHTML=""
+			var newGuess = document.createElement('tr');
+			newGuess.innerHTML=("<th>#" + cgn + "</th><th>" + document.getElementById("guess").value + "</th><th>2</th>");
+			document.getElementById("currentGuess").appendChild(newGuess)
+			cgn ++;
+			document.getElementById("guess").value = "";
+			document.getElementById("textAlert").innerHTML = "";
+		}
+		function notFound(wrongArtikel) {
+			document.getElementById("textAlert").innerHTML = "Sorry, I couldn't find a Wikipedia Artikel called '" + wrongArtikel + "'. Try a different term.";
+		}
+		function help() {
+			alert("Errate den geheimen Wikipedia-Artikel.")
+		}
+	</script>
 </body>
-  <footer>
-    <script>
-      var cgn = 3;
-      function takeGuess() {
-        if(document.getElementById("guess").value == 0) {return false};
-       document.getElementById("guessd").appendChild(document.getElementById("currentGuess").firstChild)
-       document.getElementById("currentGuess").innerHTML=""
-      var newGuess = document.createElement('tr');
-      newGuess.innerHTML=("<th>#" + cgn + "</th><th>" + document.getElementById("guess").value + "</th><th>2</th>");
-        document.getElementById("currentGuess").appendChild(newGuess)
-        cgn ++;
-        document.getElementById("guess").value = "";
-        document.getElementById("textAlert").innerHTML = "";
-      }
-      function notFound(wrongArtikel) {
-        document.getElementById("textAlert").innerHTML = "Sorry, I couldn't find a Wikipedia Artikel called '" + wrongArtikel + "'. Try a different term.";
-      }
-      function help() {
-      alert("Errate den geheimen Wikipedia-Artikel.")}
-    </script>
-  </footer>
 </html>
